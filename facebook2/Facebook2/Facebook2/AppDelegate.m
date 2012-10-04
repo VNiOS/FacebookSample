@@ -8,14 +8,28 @@
 
 #import "AppDelegate.h"
 
-#import "MasterViewController.h"
-
+#import "ViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 @implementation AppDelegate
+
+
+
+
+
+
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    return [FBSession.activeSession handleOpenURL:url];
+}
 
 - (void)dealloc
 {
     [_window release];
-    [_navigationController release];
+    [_viewController release];
     [super dealloc];
 }
 
@@ -23,10 +37,13 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-
-    MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
-    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
-    self.window.rootViewController = self.navigationController;
+    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    UINavigationController *navir=[[UINavigationController alloc]initWithRootViewController:self.viewController];
+    [navir.navigationBar setTintColor:[UIColor colorWithRed:0/255.0
+                                                     green:51.0/255.0
+                                                      blue:102.0/255.0
+                                                      alpha:1.0]];
+    self.window.rootViewController = navir;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -56,6 +73,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [FBSession.activeSession close];
 }
 
 @end
