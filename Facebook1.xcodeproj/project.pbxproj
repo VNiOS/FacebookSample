@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71114BD161D711200D309FC /* FriendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A71114BC161D711200D309FC /* FriendViewCell.m */; };
+		A71114C1161D714800D309FC /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71114BF161D714800D309FC /* FriendsViewController.m */; };
+		A71114C2161D714800D309FC /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71114C0161D714800D309FC /* FriendsViewController.xib */; };
 		A7144A4716193204002EFAB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7144A4616193204002EFAB4 /* UIKit.framework */; };
 		A7144A4916193204002EFAB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7144A4816193204002EFAB4 /* Foundation.framework */; };
 		A7144A4B16193204002EFAB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7144A4A16193204002EFAB4 /* CoreGraphics.framework */; };
@@ -25,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A71114BB161D711200D309FC /* FriendViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewCell.h; sourceTree = "<group>"; };
+		A71114BC161D711200D309FC /* FriendViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewCell.m; sourceTree = "<group>"; };
+		A71114BE161D714800D309FC /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		A71114BF161D714800D309FC /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		A71114C0161D714800D309FC /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		A7144A4216193204002EFAB4 /* Facebook1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7144A4616193204002EFAB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7144A4816193204002EFAB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,7 +111,12 @@
 				A7144A5E16193205002EFAB4 /* ViewController.h */,
 				A7144A5F16193205002EFAB4 /* ViewController.m */,
 				A7144A6116193205002EFAB4 /* ViewController.xib */,
+				A71114BE161D714800D309FC /* FriendsViewController.h */,
+				A71114BF161D714800D309FC /* FriendsViewController.m */,
+				A71114C0161D714800D309FC /* FriendsViewController.xib */,
 				A7144A4D16193204002EFAB4 /* Supporting Files */,
+				A71114BB161D711200D309FC /* FriendViewCell.h */,
+				A71114BC161D711200D309FC /* FriendViewCell.m */,
 			);
 			path = Facebook1;
 			sourceTree = "<group>";
@@ -179,6 +192,7 @@
 				A7144A5D16193205002EFAB4 /* Default-568h@2x.png in Resources */,
 				A7144A6316193205002EFAB4 /* ViewController.xib in Resources */,
 				A737E8F7161AF52E009F006A /* images.jpeg in Resources */,
+				A71114C2161D714800D309FC /* FriendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +206,8 @@
 				A7144A5316193204002EFAB4 /* main.m in Sources */,
 				A7144A5716193204002EFAB4 /* AppDelegate.m in Sources */,
 				A7144A6016193205002EFAB4 /* ViewController.m in Sources */,
+				A71114BD161D711200D309FC /* FriendViewCell.m in Sources */,
+				A71114C1161D714800D309FC /* FriendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +290,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Facebook1/Facebook1-Prefix.pch";
 				INFOPLIST_FILE = "Facebook1/Facebook1-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,6 +306,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Facebook1/Facebook1-Prefix.pch";
 				INFOPLIST_FILE = "Facebook1/Facebook1-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "FriendsViewController.h"
 @interface ViewController ()
 @property(strong,nonatomic) IBOutlet UIButton *buttonLoginLogout;
 
@@ -19,6 +20,7 @@
 -(void)updateView;
 -(void)getData;
 -(void)showAlert:(NSString *)msg;
+-(IBAction)showFriends:(id)sender;
 @end
 
 @implementation ViewController
@@ -151,6 +153,7 @@
      self.profilePic.profileID=userid;
     //NSJSONSerialization
 }
+#pragma mark alertView
 -(void)showAlert:(NSString *)msg{
     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:msg delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     [alert show];
@@ -158,8 +161,15 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
 }
+#pragma mark button action
+-(IBAction)showFriends:(id)sender{
+    FriendsViewController *viewControl=[[FriendsViewController alloc]initWithNibName:@"FriendsViewController" bundle:nil];
+    [self.navigationController pushViewController:viewControl animated:YES];
+    
+}
 -(void)dealloc{
     [super dealloc];
   
 }
+
 @end
