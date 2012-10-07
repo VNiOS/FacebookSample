@@ -41,7 +41,7 @@
     UINavigationController *navir=[[UINavigationController alloc]initWithRootViewController:self.viewController];
     [navir.navigationBar setTintColor:[UIColor colorWithRed:0/255.0
                                                      green:51.0/255.0
-                                                      blue:102.0/255.0
+                                                      blue:122.0/255.0
                                                       alpha:1.0]];
     self.window.rootViewController = navir;
     [self.window makeKeyAndVisible];

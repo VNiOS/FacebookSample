@@ -10,34 +10,40 @@
 #import <FacebookSDK/FacebookSDK.h>
 @interface ViewController ()
 @property(nonatomic,retain) IBOutlet UILabel *usernamelb;
+@property(nonatomic,retain) IBOutlet UILabel *genrelb;
 @property(nonatomic,retain) IBOutlet FBProfilePictureView *profilepic;
 @property(nonatomic,strong) id<FBGraphUser> userLogged;
 
 @property(nonatomic,retain) IBOutlet UITextField *textField;
 @property(nonatomic,retain) IBOutlet UIButton *sendMsg;
-
+@property(nonatomic,retain) IBOutlet UIImageView *imgUpload;
 
 -(IBAction)sendMsg:(id)sender;
--(void)showAlert:(NSError *)error;
+-(IBAction)takePhoto:(id)sender;
+-(IBAction)dongTextField:(id)sender;
 
+-(void)getHomeTimeline;
+-(void)getUserInfo;
+-(void)showAlert:(NSError *)error;
 @end
 
 @implementation ViewController
-@synthesize usernamelb,profilepic,userLogged,textField,sendMsg;
+@synthesize usernamelb,genrelb,profilepic,userLogged,textField,sendMsg;
+@synthesize dataUpload,imgUpload;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.title=@"Facebook";
-    //[self.navigationController.toolbar setHidden:NO];
     
     
-    self.profilepic=[[FBProfilePictureView alloc]initWithFrame:CGRectMake(12, 12, 96, 96)];
+    
+    self.profilepic=[[FBProfilePictureView alloc]initWithFrame:CGRectMake(12, 12, 60, 60)];
     self.profilepic.profileID=@"";
     [self.view addSubview:self.profilepic];
-    
+    [self.sendMsg setEnabled:NO];
     
     FBLoginView *loginview =
-    [[FBLoginView alloc] initWithPermissions:[NSArray arrayWithObject:@"publish_actions"]];
+    [[FBLoginView alloc] initWithPermissions:[NSArray arrayWithObjects:@"user_about_me", @"user_activities",@"friends_activities",@"friends_status",@"publish_actions",nil]];
     
     
     loginview.frame = CGRectMake(110, 360, 100, 40);
@@ -92,20 +98,107 @@
    
     self.profilepic.profileID = user.id;
     self.userLogged = user;
+    
+    [self.sendMsg setEnabled:YES];
+    [self getUserInfo];
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     self.profilepic.profileID=nil;
     self.usernamelb.text=@"name";
+    [self.sendMsg setEnabled:NO];
+}
+-(void)getHomeTimeline{
+  
+}
+-(void)getUserInfo{
+    NSLog(@"get User info");
+
+    [FBRequestConnection startWithGraphPath:@"/me" parameters:nil HTTPMethod:@"GET" completionHandler:^(FBRequestConnection *connection, id<FBGraphObject> result, NSError *error) {
+        NSLog(@"userinfo %@",result);
+        if ([[result objectForKey:@"gender"] isEqualToString:@"male"]) {
+            [self.genrelb setText:@"Male"];
+        }
+        else{
+            [self.genrelb setText:@"Female"];
+        }
+      
+        
+    }];
+    
+
+    
+    
+//    [FBRequestConnection startWithGraphPath:@"me/friends" parameters:nil HTTPMethod:@"GET" completionHandler:^(FBRequestConnection *connection, id<FBGraphObject> result, NSError *error) {
+//        NSLog(@"friends data :%@",[[result objectForKey:@"data"] objectAtIndex:1]);
+//        }];
 }
 #pragma mark - button action
 -(IBAction)sendMsg:(id)sender{
     [textField resignFirstResponder];
-    [FBRequestConnection startForPostStatusUpdate:textField.text completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        [self showAlert:error];
-    }];
+    if (![textField.text isEqualToString:@""]) {
+
+        
+        NSMutableDictionary *param=[NSMutableDictionary dictionaryWithObjectsAndKeys:self.imgUpload.image,@"source",textField.text,@"message", nil];
+        
+        [FBRequestConnection startWithGraphPath:@"/me/photos" parameters:param HTTPMethod:@"POST" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            [self showAlert:error];
+        }];
+        
+    }
+  
 }
+-(IBAction)dongTextField:(id)sender{
+    [sender resignFirstResponder];
+}
+-(IBAction)takePhoto:(id)sender{
+    UIActionSheet *action=[[UIActionSheet alloc]initWithTitle:@"Select" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Select on library",@"Select camera", nil];
+    [action showInView:self.view];
+}
+
 #pragma mark - alertview
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@" click %d",buttonIndex);
+    UIImagePickerController *select=[[UIImagePickerController alloc]init];
+    select.delegate=self;
+    switch (buttonIndex) {
+        case 0:
+        {
+            select.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentModalViewController:select animated:YES];
+        }
+            break;
+        case 1:
+        {
+          if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+              select.sourceType=UIImagePickerControllerSourceTypeCamera;
+              [self presentModalViewController:select animated:YES];
+          }
+          else{
+              UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"No camera" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+              [alert show];
+              
+          }
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    //UIImage *img=[info objectForKey:UIImagePickerControllerEditedImage];
+    UIImage *img1=[info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    if (img1==nil) {
+        NSLog(@"ko lay dc anh");
+    }
+    else{
+        [imgUpload setImage:img1];
+        
+    }
+    [self dismissModalViewControllerAnimated:YES];
+}
 -(void)showAlert:(NSError *)error{
     if (error) {
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Error" message:@"Not succes !" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -114,6 +207,7 @@
     else{
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Succes" message:@" Succes !" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
+        [self.textField setText:@""];
     }
 }
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7159EBB1621E20F00C69C28 /* camerabutton.png in Resources */ = {isa = PBXBuildFile; fileRef = A7159EBA1621E20F00C69C28 /* camerabutton.png */; };
 		A7EE7304161D839300496A0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EE7303161D839300496A0D /* UIKit.framework */; };
 		A7EE7306161D839300496A0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EE7305161D839300496A0D /* Foundation.framework */; };
 		A7EE7308161D839300496A0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EE7307161D839300496A0D /* CoreGraphics.framework */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7159EBA1621E20F00C69C28 /* camerabutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camerabutton.png; sourceTree = "<group>"; };
 		A7EE72FF161D839300496A0D /* Facebook2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EE7303161D839300496A0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7EE7305161D839300496A0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +118,7 @@
 		A7EE730A161D839300496A0D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7159EBA1621E20F00C69C28 /* camerabutton.png */,
 				A7EE7347161D98D500496A0D /* images.jpeg */,
 				A7EE7341161D95EB00496A0D /* fblogin.png */,
 				A7EE733F161D935B00496A0D /* fbbutton.png */,
@@ -191,6 +194,7 @@
 				A7EE7340161D935B00496A0D /* fbbutton.png in Resources */,
 				A7EE7342161D95EB00496A0D /* fblogin.png in Resources */,
 				A7EE7348161D98D500496A0D /* images.jpeg in Resources */,
+				A7159EBB1621E20F00C69C28 /* camerabutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +290,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Facebook2/Facebook2-Prefix.pch";
 				INFOPLIST_FILE = "Facebook2/Facebook2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -301,6 +306,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Facebook2/Facebook2-Prefix.pch";
 				INFOPLIST_FILE = "Facebook2/Facebook2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -325,6 +331,7 @@
 				A7EE7325161D839300496A0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

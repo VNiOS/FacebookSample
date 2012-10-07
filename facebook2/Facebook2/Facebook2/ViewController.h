@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
-@interface ViewController : UIViewController<FBLoginViewDelegate>{
-    
+@interface ViewController : UIViewController<FBLoginViewDelegate,UIAlertViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate>{
+    NSMutableDictionary *dataUpload;
 }
 
-
+@property(nonatomic,retain) NSMutableDictionary *dataUpload;
 
 
 
