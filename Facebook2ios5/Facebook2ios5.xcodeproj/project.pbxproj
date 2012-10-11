@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7501CF616240D8000ACCF87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7501CF516240D8000ACCF87 /* UIKit.framework */; };
+		A7501CF816240D8000ACCF87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7501CF716240D8000ACCF87 /* Foundation.framework */; };
+		A7501CFA16240D8000ACCF87 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7501CF916240D8000ACCF87 /* CoreGraphics.framework */; };
+		A7501D0016240D8000ACCF87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7501CFE16240D8000ACCF87 /* InfoPlist.strings */; };
+		A7501D0216240D8000ACCF87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7501D0116240D8000ACCF87 /* main.m */; };
+		A7501D0616240D8000ACCF87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7501D0516240D8000ACCF87 /* AppDelegate.m */; };
+		A7501D0916240D8000ACCF87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7501D0816240D8000ACCF87 /* ViewController.m */; };
+		A7501D0C16240D8000ACCF87 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7501D0A16240D8000ACCF87 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7501CF116240D8000ACCF87 /* Facebook2ios5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook2ios5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7501CF516240D8000ACCF87 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A7501CF716240D8000ACCF87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A7501CF916240D8000ACCF87 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7501CFD16240D8000ACCF87 /* Facebook2ios5-Info.plist */ = {isa = PBXFileReference; path = "Facebook2ios5-Info.plist"; sourceTree = "<group>"; };
+		A7501CFF16240D8000ACCF87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7501D0116240D8000ACCF87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7501D0316240D8000ACCF87 /* Facebook2ios5-Prefix.pch */ = {isa = PBXFileReference; path = "Facebook2ios5-Prefix.pch"; sourceTree = "<group>"; };
+		A7501D0416240D8000ACCF87 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		A7501D0516240D8000ACCF87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A7501D0716240D8000ACCF87 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		A7501D0816240D8000ACCF87 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A7501D0B16240D8000ACCF87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7501CEE16240D8000ACCF87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7501CF616240D8000ACCF87 /* UIKit.framework in Frameworks */,
+				A7501CF816240D8000ACCF87 /* Foundation.framework in Frameworks */,
+				A7501CFA16240D8000ACCF87 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7501CE616240D8000ACCF87 = {
+			isa = PBXGroup;
+			children = (
+				A7501CFB16240D8000ACCF87 /* Facebook2ios5 */,
+				A7501CF416240D8000ACCF87 /* Frameworks */,
+				A7501CF216240D8000ACCF87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7501CF216240D8000ACCF87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7501CF116240D8000ACCF87 /* Facebook2ios5.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7501CF416240D8000ACCF87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7501CF516240D8000ACCF87 /* UIKit.framework */,
+				A7501CF716240D8000ACCF87 /* Foundation.framework */,
+				A7501CF916240D8000ACCF87 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7501CFB16240D8000ACCF87 /* Facebook2ios5 */ = {
+			isa = PBXGroup;
+			children = (
+				A7501D0416240D8000ACCF87 /* AppDelegate.h */,
+				A7501D0516240D8000ACCF87 /* AppDelegate.m */,
+				A7501D0716240D8000ACCF87 /* ViewController.h */,
+				A7501D0816240D8000ACCF87 /* ViewController.m */,
+				A7501D0A16240D8000ACCF87 /* ViewController.xib */,
+				A7501CFC16240D8000ACCF87 /* Supporting Files */,
+			);
+			path = Facebook2ios5;
+			sourceTree = "<group>";
+		};
+		A7501CFC16240D8000ACCF87 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7501CFD16240D8000ACCF87 /* Facebook2ios5-Info.plist */,
+				A7501CFE16240D8000ACCF87 /* InfoPlist.strings */,
+				A7501D0116240D8000ACCF87 /* main.m */,
+				A7501D0316240D8000ACCF87 /* Facebook2ios5-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7501CF016240D8000ACCF87 /* Facebook2ios5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7501D0F16240D8000ACCF87 /* Build configuration list for PBXNativeTarget "Facebook2ios5" */;
+			buildPhases = (
+				A7501CED16240D8000ACCF87 /* Sources */,
+				A7501CEE16240D8000ACCF87 /* Frameworks */,
+				A7501CEF16240D8000ACCF87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Facebook2ios5;
+			productName = Facebook2ios5;
+			productReference = A7501CF116240D8000ACCF87 /* Facebook2ios5.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7501CE816240D8000ACCF87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A7501CEB16240D8000ACCF87 /* Build configuration list for PBXProject "Facebook2ios5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A7501CE616240D8000ACCF87;
+			productRefGroup = A7501CF216240D8000ACCF87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7501CF016240D8000ACCF87 /* Facebook2ios5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7501CEF16240D8000ACCF87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7501D0016240D8000ACCF87 /* InfoPlist.strings in Resources */,
+				A7501D0C16240D8000ACCF87 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7501CED16240D8000ACCF87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7501D0216240D8000ACCF87 /* main.m in Sources */,
+				A7501D0616240D8000ACCF87 /* AppDelegate.m in Sources */,
+				A7501D0916240D8000ACCF87 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A7501CFE16240D8000ACCF87 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7501CFF16240D8000ACCF87 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A7501D0A16240D8000ACCF87 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7501D0B16240D8000ACCF87 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7501D0D16240D8000ACCF87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7501D0E16240D8000ACCF87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7501D1016240D8000ACCF87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Facebook2ios5/Facebook2ios5-Prefix.pch";
+				INFOPLIST_FILE = "Facebook2ios5/Facebook2ios5-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A7501D1116240D8000ACCF87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Facebook2ios5/Facebook2ios5-Prefix.pch";
+				INFOPLIST_FILE = "Facebook2ios5/Facebook2ios5-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7501CEB16240D8000ACCF87 /* Build configuration list for PBXProject "Facebook2ios5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7501D0D16240D8000ACCF87 /* Debug */,
+				A7501D0E16240D8000ACCF87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7501D0F16240D8000ACCF87 /* Build configuration list for PBXNativeTarget "Facebook2ios5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7501D1016240D8000ACCF87 /* Debug */,
+				A7501D1116240D8000ACCF87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7501CE816240D8000ACCF87 /* Project object */;
+}
